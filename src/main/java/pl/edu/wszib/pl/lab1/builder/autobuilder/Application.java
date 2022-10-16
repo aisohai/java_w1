@@ -18,6 +18,9 @@ public class Application {
                 .gender(Gender.MALE)
                 .address(address)
                 .build();
+//        Person.create()
+//        Person.male()
+//        Person.female()
         System.out.println(person);
     }
 }
