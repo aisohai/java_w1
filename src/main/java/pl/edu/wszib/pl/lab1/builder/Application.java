@@ -2,28 +2,17 @@ package pl.edu.wszib.pl.lab1.builder;
 
 public class Application {
 
-    private final String firstName;
-    private final String lastName;
-    private final Gender gender;
-    private final Integer age;
-    public static class Address{
-
-    };
-
-
-
-
     public static void main(String[] args) {
-        Person.Builder()
-                .firstname()
-                .lastName()
-                .sex()
-                .Address()
-                .age()
-
-
+        Person.Builder personBuilder = Person.builder()
+                .firstName("Alo")
+                .lastName("Dwalo")
+                .age(27)
+                .gender(Gender.MALE);
+        Address address = personBuilder.addressBuilder()
+                .city("Krakow")
+                .number("44")
+                .postalCode("44-666")
                 .build();
+        personBuilder.address(address);
     }
-
-
 }
